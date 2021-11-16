@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+<div style="margin: 30px">
+    Velocidade do veículo: <input type="number" name="txtvel" id="txtvel" style="width: 100px;"> Km/h
+    <input type="button" value="Enviar" onclick="calcular()">
+    <p id="text"></p>
+</div>
+
+    Qual é o país que você mora? <input type="text" name="txt" id="from">
+    <input type="button" value="Verificar" onclick="origem()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtv = document.getElementById('txtvel')
+            var vel = Number(txtv.value)
+            var ola = document.getElementById('text')
+            ola.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} Km/h.</strong></p>`
+            if (vel > 60) {
+                ola.innerHTML += `MULTADO`
+            } else {
+                ola.innerHTML += `Dirija sempre com cinto de segurança!`
+            }
+        }
+
+
+        function origem() {
+            var txt = document.getElementById('from')
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Você nasceu no ${txt}.</p>`
+            if (txt == Brasil) {
+                res.innerHTML += `<p>Olá, Brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Olá, Estrangeiro!</p>`
+            }
+
+            res.innerHTML += `<p>Seja bem vindo(a)!</p>`
+
+        }
+    </script>
+    
+</body>
+</html>

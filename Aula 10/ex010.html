@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: blueviolet;
+            color: white;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+            Clique aqui
+    </div>
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mousedown',aperta)
+        a.addEventListener('mouseover',entrar)
+        a.addEventListener('mouseout',sair)
+
+        function clicar() {
+            a.innerText = "Clicou!"
+            a.style.background = 'blueviolet'
+        }
+        function aperta() {
+            a.innerText = "Solta, carai!"
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.style.background = 'blue'
+            a.innerText = "Pode clicar, não vou te morder!"
+        }
+        function sair() {
+            a.style.background = 'blueviolet'
+            a.innerText = "Clica aqui meu fi!"
+        }
+    </script>
+    
+    
+</body>
+</html>

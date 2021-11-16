@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?') // prompt sempre retorna como string
+        // utilize Number para converter string em number
+        // para convertar para texto é só utilizar String
+        // usar esses antes dos parenteses
+        // para uma melhor concatenação usa-se crase nas strings e ${} para add as functionsfk
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`)
+        var n1 = Number(window.prompt('Qual é a idade da sua mãe?'))
+        var n2 = Number(window.prompt('Qual é a sua idade?'))
+        var s = n1 + n2
+        document.write(`Vocês dois possuem ${s} anos!`)
+        /* Se quiser converter um número em R$
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    </script>
+</body>
+</html>
